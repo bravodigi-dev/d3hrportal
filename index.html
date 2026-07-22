@@ -17,12 +17,9 @@
   </div>
 
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Daythree HR Portal home">
-      <span class="brand-mark">d3</span>
-      <span>
-        <strong>Daythree</strong>
-        <small>Employee Knowledge Portal</small>
-      </span>
+    <a class="brand official-brand" href="#home" aria-label="Daythree HR Portal home">
+      <img src="assets/daythree-logo.png" alt="Daythree – it’s a brand new day" class="official-logo">
+      <span class="portal-label">Employee Knowledge Portal</span>
     </a>
 
     <nav class="desktop-nav" aria-label="Primary navigation">
@@ -422,5 +419,35 @@
 
   <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">↑</button>
   <script src="script.js"></script>
+
+  <button id="chatLauncher" class="chat-launcher" type="button" aria-label="Open HR chat">
+    <span>💬</span><span>Ask HR</span>
+  </button>
+
+  <section id="chatPanel" class="chat-panel" aria-label="HR chat assistant" aria-hidden="true">
+    <header class="chat-header">
+      <div>
+        <strong>Daythree HR Assistant</strong>
+        <small>Instant guidance from portal information</small>
+      </div>
+      <button id="chatClose" type="button" aria-label="Close HR chat">×</button>
+    </header>
+    <div id="chatMessages" class="chat-messages" aria-live="polite">
+      <div class="chat-message bot">Hi! I can help with leave, payroll, medical claims, overtime, resignation, HR contacts and workplace policies.</div>
+    </div>
+    <div class="chat-suggestions">
+      <button type="button" data-question="How do I apply for leave?">Apply for leave</button>
+      <button type="button" data-question="When is salary paid?">Salary date</button>
+      <button type="button" data-question="How do I submit a medical claim?">Medical claim</button>
+      <button type="button" data-question="How do I contact HR?">Contact HR</button>
+    </div>
+    <div class="chat-input-row">
+      <label class="sr-only" for="chatInput">Ask an HR question</label>
+      <input id="chatInput" type="text" placeholder="Type your HR question..." autocomplete="off">
+      <button id="chatSend" type="button">Send</button>
+    </div>
+    <p class="chat-disclaimer">General guidance only. For personal or confidential matters, contact HR directly.</p>
+  </section>
+
 </body>
 </html>

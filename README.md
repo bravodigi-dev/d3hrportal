@@ -1,29 +1,5 @@
-# Daythree Employee Knowledge Portal
+# Daythree Employee Knowledge Portal with HR Chat
 
-A responsive, interactive HR knowledge portal built for GitHub Pages.
+Upload all files and the complete `assets` folder to the root of the GitHub repository.
 
-## Files
-- `index.html`
-- `style.css`
-- `script.js`
-- `assets/`
-
-## Publish on GitHub Pages
-1. Upload all files and the `assets` folder to the root of your repository.
-2. Open **Settings → Pages**.
-3. Choose **Deploy from a branch**.
-4. Select **main** and **/(root)**.
-5. Save and wait for deployment.
-
-Expected URL:
-`https://bravodigi-dev.github.io/d3hrportal/`
-
-## Features
-- Responsive employee dashboard
-- Live HR article search
-- FAQ category filtering
-- Dark mode
-- Expandable FAQs
-- Image preview modal
-- Mobile navigation
-- Back-to-top control
+The chat assistant works locally in the browser and does not require a backend. For a future ElevenLabs or AI integration, use a secure backend and never place private API keys directly in GitHub Pages files.
