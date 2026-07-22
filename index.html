@@ -1,405 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Daythree Employee Knowledge Portal" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Daythree Employee Knowledge Portal">
   <title>Daythree Employee Knowledge Portal</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="announcement">
-    <span>Employee Knowledge Portal</span>
-    <span class="announcement-note">Clear HR guidance, benefits and workplace resources in one place.</span>
-  </div>
+  <div class="top-line"></div>
 
-  <header class="site-header">
-    <a class="brand official-brand" href="#home" aria-label="Daythree HR Portal home">
-      <img src="assets/daythree-logo.png" alt="Daythree – it’s a brand new day" class="official-logo">
-      <span class="portal-label">Employee Knowledge Portal</span>
+  <header class="header">
+    <a href="#home" class="brand" aria-label="Daythree portal home">
+      <img src="assets/daythree-logo.png" alt="Daythree – it's a brand new day">
     </a>
 
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="#home">Home</a>
-      <a href="#quick-access">Quick Access</a>
-      <a href="#policies">Policies</a>
-      <a href="#faq">FAQ</a>
-      <a href="#support">HR Support</a>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="active" href="#home">⌂ Home</a>
+      <a href="#policies">◈ HR Policies</a>
+      <a href="#employee-info">♙ Employee Info</a>
+      <a href="#resources">▣ Resources</a>
+      <a href="#quick-links">↗ Quick Links</a>
+      <a href="#contact">◉ Contact HR</a>
     </nav>
 
     <div class="header-actions">
-      <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle dark mode">◐</button>
-      <button id="menuToggle" class="icon-btn mobile-only" type="button" aria-label="Open menu">☰</button>
+      <button id="themeToggle" class="round-btn" aria-label="Toggle dark mode">◐</button>
+      <button id="menuToggle" class="round-btn mobile-menu-btn" aria-label="Open menu">☰</button>
     </div>
   </header>
 
-  <nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation">
+  <nav id="mobileNav" class="mobile-nav">
     <a href="#home">Home</a>
-    <a href="#quick-access">Quick Access</a>
-    <a href="#policies">Policies</a>
-    <a href="#faq">FAQ</a>
-    <a href="#support">HR Support</a>
+    <a href="#policies">HR Policies</a>
+    <a href="#employee-info">Employee Info</a>
+    <a href="#resources">Resources</a>
+    <a href="#quick-links">Quick Links</a>
+    <a href="#contact">Contact HR</a>
   </nav>
 
   <main>
-    <section id="home" class="hero">
+    <section id="home" class="hero shell">
+      <div class="hero-bg"></div>
       <div class="hero-copy">
-        <span class="eyebrow">WELCOME TO DAYTHREE</span>
-        <h1>Everything employees need, in one easy place.</h1>
-        <p>
-          Whether you are a new joiner or an existing employee, this portal helps you quickly access
-          HR information, employee benefits and workplace resources.
-        </p>
-
-        <div class="search-wrap">
-          <span aria-hidden="true">⌕</span>
-          <input id="globalSearch" type="search" placeholder="Search payroll, leave, medical claims, resignation..." />
-          <kbd>/</kbd>
-        </div>
-
-        <p class="quote">“Knowledge is only valuable when it’s easy to access.”</p>
+        <span class="eyebrow">DAYTHREE EMPLOYEE EXPERIENCE</span>
+        <h1>Welcome to the <span>Daythree</span> Employee Knowledge Portal</h1>
+        <p>Your one-stop hub for HR policies, employee information, resources and workplace support.</p>
       </div>
 
-      <aside class="hero-panel">
-        <div class="hero-stat">
-          <span>HR Inbox</span>
-          <a href="mailto:askhr@daythree.co">askhr@daythree.co</a>
-        </div>
-        <div class="hero-stat">
-          <span>Salary Bank Panel</span>
-          <strong>RHB Bank</strong>
-        </div>
-        <div class="hero-stat">
-          <span>Medical Claim Cut-off</span>
-          <strong>24th of each month</strong>
-        </div>
-        <div class="hero-stat">
-          <span>Maximum Time Off</span>
-          <strong>2 hours</strong>
-        </div>
-      </aside>
+      <div class="values-grid">
+        <article class="value-card">
+          <span class="value-icon">👥</span>
+          <h3>People First</h3>
+          <p>We care for our people</p>
+        </article>
+        <article class="value-card">
+          <span class="value-icon">🛡️</span>
+          <h3>Integrity</h3>
+          <p>We do the right thing always</p>
+        </article>
+        <article class="value-card">
+          <span class="value-icon">★</span>
+          <h3>Excellence</h3>
+          <p>We deliver with passion</p>
+        </article>
+        <article class="value-card">
+          <span class="value-icon">♥</span>
+          <h3>Together</h3>
+          <p>We win as one team</p>
+        </article>
+      </div>
+
+      <div class="hero-search">
+        <span>⌕</span>
+        <input id="globalSearch" type="search" placeholder="Search policies, topics, documents...">
+        <button id="searchButton" type="button">Search</button>
+      </div>
     </section>
 
-    <section id="quick-access" class="section">
-      <div class="section-heading">
-        <div>
-          <span class="eyebrow">QUICK ACCESS</span>
-          <h2>Find what you need faster</h2>
-        </div>
-        <p>Choose a topic or use the search bar above.</p>
-      </div>
-
-      <div class="quick-grid">
-        <a class="quick-card searchable" data-search="leave annual sick emergency hospitalisation compassionate time off working arrangements" href="#leave">
-          <span class="quick-icon">📅</span><strong>Leave</strong><small>Entitlements, balance and applications</small>
-        </a>
-        <a class="quick-card searchable" data-search="payroll salary payslip zakat epf socso bank account tax employment letter" href="#payroll">
-          <span class="quick-icon">💳</span><strong>Payroll</strong><small>Salary, payslips, EPF and tax</small>
-        </a>
-        <a class="quick-card searchable" data-search="medical claim reimbursement receipt certificate faith cut off" href="#medical">
-          <span class="quick-icon">🩺</span><strong>Medical</strong><small>Claims and reimbursement timeline</small>
-        </a>
-        <a class="quick-card searchable" data-search="overtime ot normal day off day rest day public holiday rate formula" href="#overtime">
-          <span class="quick-icon">⏱️</span><strong>Overtime</strong><small>Eligibility, approval and rates</small>
-        </a>
-        <a class="quick-card searchable" data-search="grievance complaint unfair treatment whistleblowing unethical retaliation" href="#relations">
-          <span class="quick-icon">🤝</span><strong>Employee Relations</strong><small>Grievance and whistleblowing</small>
-        </a>
-        <a class="quick-card searchable" data-search="benefits corporate discounts grab foodpanda proton inti celebrity fitness" href="#benefits">
-          <span class="quick-icon">🎁</span><strong>Benefits</strong><small>Corporate employee discounts</small>
-        </a>
-      </div>
-
-      <div id="searchStatus" class="search-status" aria-live="polite"></div>
+    <section id="quick-links" class="quickbar shell">
+      <a href="#quick-access" class="quickbar-title"><span>▦</span><strong>Quick Access</strong></a>
+      <a href="#leave"><span>▣</span>Apply Leave</a>
+      <a href="#leave"><span>♙</span>Leave Balance</a>
+      <a href="#payroll"><span>▤</span>Payslip & Payroll</a>
+      <a href="#resources"><span>▧</span>HR Forms</a>
+      <a href="#relations"><span>⚑</span>Raise a Grievance</a>
+      <a href="#contact"><span>◉</span>Contact HR</a>
     </section>
 
-    <section id="policies" class="section muted-section">
+    <section id="employee-info" class="content-section shell">
       <div class="section-heading">
         <div>
-          <span class="eyebrow">CORE POLICIES</span>
+          <span class="eyebrow purple">EMPLOYEE INFORMATION</span>
           <h2>Key employee information</h2>
         </div>
+        <p>Explore the most frequently used HR information and workplace guidance.</p>
       </div>
 
-      <div class="policy-grid">
-        <article id="leave" class="content-card searchable" data-search="leave entitlement benefits employment type years service contract annual sick emergency hospitalisation compassionate">
-          <div class="card-heading">
-            <span class="card-icon">📅</span>
-            <div><h3>Leave Entitlement</h3><p>Supporting work-life balance and well-being.</p></div>
+      <div class="info-grid">
+        <article id="leave" class="info-card searchable" data-search="leave annual medical hospitalisation maternity paternity marriage compassionate entitlement faith">
+          <div class="card-title">
+            <span class="icon-chip">▣</span>
+            <div>
+              <h3>Leave Entitlement</h3>
+              <p>Supporting work-life balance and well-being.</p>
+            </div>
           </div>
           <p>Your leave entitlement depends on employment type, years of service and your employment contract.</p>
-          <div class="image-grid">
-            <button class="image-button" data-image="assets/leave-chart-1.png" data-title="Types of Leave – Part 1">
+          <div class="image-pair">
+            <button class="image-tile" data-image="assets/leave-chart-1.png" data-title="Types of Leave – Part 1">
               <img src="assets/leave-chart-1.png" alt="Types of leave chart part 1">
+              <span>Types of leave chart part 1 ↗</span>
             </button>
-            <button class="image-button" data-image="assets/leave-chart-2.png" data-title="Types of Leave – Part 2">
+            <button class="image-tile" data-image="assets/leave-chart-2.png" data-title="Types of Leave – Part 2">
               <img src="assets/leave-chart-2.png" alt="Types of leave chart part 2">
+              <span>Types of leave chart part 2 ↗</span>
             </button>
           </div>
         </article>
 
-        <article id="dress-code" class="content-card searchable" data-search="dress code professional appearance grooming client restrictions torn shorts sleeveless off shoulder singlet skirt crop top slippers">
-          <div class="card-heading">
-            <span class="card-icon">👔</span>
-            <div><h3>Dress Code</h3><p>Maintain a professional appearance.</p></div>
+        <article class="info-card searchable" data-search="dress code professional appearance grooming allowed not allowed client specific">
+          <div class="card-title">
+            <span class="icon-chip">♟</span>
+            <div>
+              <h3>Dress Code</h3>
+              <p>Maintain a professional appearance.</p>
+            </div>
           </div>
-          <ul class="check-list">
+          <ul class="green-list">
             <li>Dress neatly and professionally.</li>
             <li>Maintain good personal grooming.</li>
             <li>Follow client-specific dress requirements.</li>
           </ul>
-          <button class="image-button full" data-image="assets/dress-code.png" data-title="Dress Code Restrictions">
+          <button class="wide-image" data-image="assets/dress-code.png" data-title="Dress Code Restrictions">
             <img src="assets/dress-code.png" alt="Dress code restrictions">
           </button>
         </article>
 
-        <article id="overtime" class="content-card searchable" data-search="overtime policy prior approval employment act company client public holiday normal day off day rest day rate">
-          <div class="card-heading">
-            <span class="card-icon">⏱️</span>
-            <div><h3>Overtime Policy</h3><p>Subject to operational need and prior approval.</p></div>
+        <article id="payroll" class="info-card compact searchable" data-search="salary payroll payslip rhb bank epf socso zakat tax letter">
+          <div class="card-title">
+            <span class="icon-chip pink">▤</span>
+            <div>
+              <h3>Payroll & Payslip</h3>
+              <p>Salary, deductions and official letters.</p>
+            </div>
           </div>
-          <p>Overtime eligibility and payment are subject to Employment Act requirements, company policy and client requirements.</p>
-          <p>You will follow public holidays assigned according to your role and campaign.</p>
-          <button class="image-button full" data-image="assets/overtime-rates.png" data-title="Overtime Calculation Rates">
+          <div class="mini-stats">
+            <div><span>Salary Date</span><strong>Last working day</strong></div>
+            <div><span>Salary Bank</span><strong>RHB Bank</strong></div>
+            <div><span>Payslip</span><strong>Within 4 working days</strong></div>
+          </div>
+        </article>
+
+        <article class="info-card compact searchable" data-search="medical claim reimbursement faith receipt medical certificate 24th cut off">
+          <div class="card-title">
+            <span class="icon-chip green">✚</span>
+            <div>
+              <h3>Medical Claims</h3>
+              <p>Submit and track reimbursement.</p>
+            </div>
+          </div>
+          <p>Submit through Faith with the original receipt and Medical Certificate where applicable. Claims approved by the 24th are reimbursed in the same payroll cycle.</p>
+        </article>
+
+        <article class="info-card compact searchable" data-search="overtime ot normal day rest day public holiday approval calculation">
+          <div class="card-title">
+            <span class="icon-chip orange">◷</span>
+            <div>
+              <h3>Overtime</h3>
+              <p>Eligibility, approval and payment rates.</p>
+            </div>
+          </div>
+          <button class="wide-image" data-image="assets/overtime-rates.png" data-title="Overtime Calculation Rates">
             <img src="assets/overtime-rates.png" alt="Overtime calculation rates">
           </button>
         </article>
 
-        <article id="relations" class="content-card searchable" data-search="grievance concern work environment working relationships unfair treatment workplace issue employment matter hrbp confidential whistleblowing unethical unlawful retaliation">
-          <div class="card-heading">
-            <span class="card-icon">🤝</span>
-            <div><h3>Grievance & Whistleblowing</h3><p>Speak up with confidence.</p></div>
+        <article id="relations" class="info-card compact searchable" data-search="grievance complaint whistleblowing unfair treatment hr support">
+          <div class="card-title">
+            <span class="icon-chip orange">⚑</span>
+            <div>
+              <h3>Employee Relations</h3>
+              <p>Speak up with confidence.</p>
+            </div>
           </div>
-          <p>Concerns are handled fairly, confidentially and professionally.</p>
-          <div class="contact-row">
-            <a href="mailto:askhr@daythree.co"><span>Grievance</span><strong>askhr@daythree.co</strong></a>
+          <div class="contact-cards">
+            <a href="mailto:askhr@daythree.co"><span>HR grievance support</span><strong>askhr@daythree.co</strong></a>
             <a href="mailto:whistleblowing@daythree.co"><span>Whistleblowing</span><strong>whistleblowing@daythree.co</strong></a>
           </div>
         </article>
-
-        <article id="safety" class="content-card searchable warning-card" data-search="workplace safety smoking vaping prohibited fine rm100 building management disciplinary access lobby">
-          <div class="card-heading">
-            <span class="card-icon">⚠️</span>
-            <div><h3>Workplace Safety</h3><p>Smoking and vaping restrictions.</p></div>
-          </div>
-          <p>Smoking and vaping are strictly prohibited in designated non-smoking areas.</p>
-          <ul>
-            <li>RM100 fine imposed by building management.</li>
-            <li>Disciplinary action may be taken by the company.</li>
-            <li>Unpaid fines may result in restricted lobby or access privileges.</li>
-          </ul>
-        </article>
-
-        <article id="benefits" class="content-card searchable" data-search="employee benefits corporate discount grab foodpanda proton inti international college celebrity fitness">
-          <div class="card-heading">
-            <span class="card-icon">🎁</span>
-            <div><h3>Employee Benefits</h3><p>Exclusive corporate discounts.</p></div>
-          </div>
-          <div class="tag-list">
-            <span>Grab</span><span>foodpanda</span><span>Proton</span><span>INTI International College</span><span>Celebrity Fitness</span>
-          </div>
-        </article>
       </div>
     </section>
 
-    <section id="faq" class="section">
+    <section id="policies" class="content-section alt-bg">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow purple">HR KNOWLEDGE CENTRE</span>
+            <h2>Policies and common questions</h2>
+          </div>
+          <div class="filter-wrap">
+            <label for="faqFilter">Filter</label>
+            <select id="faqFilter">
+              <option value="all">All categories</option>
+              <option value="leave">Leave</option>
+              <option value="payroll">Payroll</option>
+              <option value="medical">Medical</option>
+              <option value="relations">Employee Relations</option>
+              <option value="security">Information Security</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="faq-grid">
+          <details class="faq searchable" data-category="leave" data-search="apply leave faith manager approval">
+            <summary>How do I apply for leave?</summary>
+            <p>Log in to the Faith HR System, select the leave type, enter the dates and submit the request for manager approval.</p>
+          </details>
+          <details class="faq searchable" data-category="leave" data-search="leave balance faith">
+            <summary>How do I check my leave balance?</summary>
+            <p>View entitlement, leave history and approved leave through the Faith HR System.</p>
+          </details>
+          <details class="faq searchable" data-category="payroll" data-search="when salary paid last working day">
+            <summary>When is salary paid?</summary>
+            <p>Salary is normally credited on the last working day of the month unless HR communicates a change.</p>
+          </details>
+          <details class="faq searchable" data-category="payroll" data-search="request payslip four working days">
+            <summary>When can I access my payslip?</summary>
+            <p>Your payslip should be available within four working days after salary is credited.</p>
+          </details>
+          <details class="faq searchable" data-category="medical" data-search="submit medical claim receipt certificate 24">
+            <summary>How do I submit a medical claim?</summary>
+            <p>Submit through Faith with the original receipt and Medical Certificate where applicable. Claims approved by the 24th are normally reimbursed in the same cycle.</p>
+          </details>
+          <details class="faq searchable" data-category="relations" data-search="complaint grievance hr business partner confidential">
+            <summary>How do I raise a grievance?</summary>
+            <p>Contact your assigned HR Business Partner or email askhr@daythree.co. Concerns are handled professionally and confidentially.</p>
+          </details>
+          <details class="faq searchable" data-category="relations" data-search="resignation notice period clearance">
+            <summary>How do I submit my resignation?</summary>
+            <p>Inform your immediate supervisor, submit the resignation formally and serve the notice period stated in your Employment Contract.</p>
+          </details>
+          <details class="faq searchable" data-category="security" data-search="suspicious email phishing link attachment">
+            <summary>What should I do with a suspicious email?</summary>
+            <p>Do not click links or download attachments. Report it to the IT Helpdesk and follow IT guidance.</p>
+          </details>
+        </div>
+        <p id="searchStatus" class="search-status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="resources" class="content-section shell">
       <div class="section-heading">
         <div>
-          <span class="eyebrow">EMPLOYEE FAQ</span>
-          <h2>Answers to common questions</h2>
-        </div>
-        <div class="faq-tools">
-          <label for="faqCategory">Category</label>
-          <select id="faqCategory">
-            <option value="all">All categories</option>
-            <option value="payroll">Payroll</option>
-            <option value="medical">Medical Benefits</option>
-            <option value="leave">Leave & Working Arrangements</option>
-            <option value="performance">Performance & Salary</option>
-            <option value="relations">Employee Relations</option>
-            <option value="communication">HR Communication</option>
-            <option value="support">HR Support & Logistics</option>
-            <option value="career">Career Development</option>
-            <option value="security">Information Security</option>
-          </select>
+          <span class="eyebrow purple">RESOURCES</span>
+          <h2>Employee support resources</h2>
         </div>
       </div>
-
-      <div class="faq-layout">
-        <aside class="faq-summary">
-          <strong>Popular topics</strong>
-          <a href="#payroll">Payroll & Payslip</a>
-          <a href="#medical">Medical Claims</a>
-          <a href="#leave">Leave Balance</a>
-          <a href="#support">Contact HR</a>
-        </aside>
-
-        <div class="accordion">
-          <h3 id="payroll">Payroll</h3>
-
-          <details class="faq-item searchable" data-category="payroll" data-search="payslip four working days salary credited askhr">
-            <summary>When and how can I request my payslip?</summary>
-            <p>Your payslip will be available within four working days after salary has been credited. If it is not available after this period, email <a href="mailto:askhr@daythree.co">askhr@daythree.co</a>.</p>
-          </details>
-
-          <details class="faq-item searchable" data-category="payroll" data-search="zakat deduction state selangor pulau pinang wilayah persekutuan employer email">
-            <summary>How can I set up Zakat deductions?</summary>
-            <p>Register through the official Zakat website for your state and use <strong>askhr@daythree.co</strong> as the employer email. The Zakat office will notify Daythree and payroll will process the monthly deduction after confirmation.</p>
-          </details>
-
-          <details class="faq-item searchable" data-category="payroll" data-search="epf socso refunds foreigners leaving malaysia withdrawal contributions">
-            <summary>Can foreign employees claim EPF or SOCSO refunds when leaving Malaysia?</summary>
-            <p>Foreign employees may withdraw EPF contributions when permanently leaving Malaysia, subject to EPF regulations. SOCSO contributions are not refundable.</p>
-          </details>
-
-          <details class="faq-item searchable" data-category="payroll" data-search="income tax foreign employees resident 182 days progressive 0 30 non resident flat">
-            <summary>How does income tax work for foreign employees?</summary>
-            <p>Foreign employees are subject to Malaysian income tax. Residents who stay more than 182 days are generally subject to progressive rates from 0% to 30%. Non-residents are generally subject to a flat 30% rate.</p>
-          </details>
-
-          <details class="faq-item searchable" data-category="payroll" data-search="when salary paid last working day month public holiday">
-            <summary>When is salary paid?</summary>
-            <p>Salary is normally credited on the last working day of each month unless otherwise communicated. Employees will be informed in advance of changes caused by public holidays or operational requirements.</p>
-          </details>
-
-          <details class="faq-item searchable" data-category="payroll" data-search="update bank account salary statement cut off">
-            <summary>How do I update my bank account details?</summary>
-            <p>Submit your request to HR with supporting documents such as a bank statement or account details. The change must be completed before the payroll cut-off date to take effect in the current cycle.</p>
-          </details>
-
-          <details class="faq-item searchable" data-category="payroll" data-search="update epf nomination kwsp branch online">
-            <summary>How do I update my EPF nomination?</summary>
-            <p>Update your nomination directly with EPF/KWSP through an EPF branch or its online services where applicable.</p>
-          </details>
-
-          <details class="faq-item searchable" data-category="payroll" data-search="employment confirmation letter salary letter purpose working days">
-            <summary>How can I request an Employment Confirmation Letter or Salary Letter?</summary>
-            <p>Email <a href="mailto:askhr@daythree.co">askhr@daythree.co</a> and state the letter type, purpose and any specific information required. Allow several working days for processing.</p>
-          </details>
-
-          <details class="faq-item searchable" data-category="payroll" data-search="ev portal employee verification candidate details payroll">
-            <summary>What is EV Portal?</summary>
-            <p>EV Portal means Employee Verification Portal. New candidates use it to verify personal details and support a smooth payroll process.</p>
-          </details>
-
-          <details class="faq-item searchable" data-category="payroll" data-search="company bank panel salary rhb">
-            <summary>What is the company’s salary bank panel?</summary>
-            <p>RHB Bank.</p>
-          </details>
-
-          <h3 id="medical">Medical Benefits</h3>
-
-          <details class="faq-item searchable" data-category="medical" data-search="unused medical claims carry forward accumulated pay claim">
-            <summary>Can unused medical claims be carried forward?</summary>
-            <p>No. Medical claims operate on a Pay & Claim basis and unused monthly entitlement cannot be carried forward or accumulated.</p>
-          </details>
-
-          <details class="faq-item searchable" data-category="medical" data-search="submit medical claim faith receipt medical certificate reimbursement 24 cut off">
-            <summary>How do I submit a medical claim?</summary>
-            <p>Submit through the Faith system with the original medical receipt and Medical Certificate where applicable. Claims approved by the 24th are reimbursed in the same payroll cycle; approvals after the cut-off are reimbursed in the following month.</p>
-          </details>
-
-          <h3 id="leave-faq">Leave & Working Arrangements</h3>
-
-          <details class="faq-item searchable" data-category="leave" data-search="part time student examination special arrangement annual leave timetable operations manager faith">
-            <summary>Can I request a special working arrangement as a part-time student?</summary>
-            <p>Employees must follow schedules assigned by Operations. For examinations, apply for Annual Leave, submit the examination timetable, obtain Operations Manager approval and apply through Faith.</p>
-          </details>
-
-          <details class="faq-item searchable" data-category="leave" data-search="time off to team leader operations manager maximum two hours">
-            <summary>How do I apply for Time Off?</summary>
-            <p>Inform your Team Leader, obtain Operations Manager approval and submit through the required process. Maximum Time Off allocation is two hours.</p>
-          </details>
-
-          <details class="faq-item searchable" data-category="leave" data-search="check leave balance faith system entitlement history approved">
-            <summary>How do I check my leave balance?</summary>
-            <p>Log in to the Faith HR System to view entitlement, leave history and upcoming approved leave. For discrepancies, contact your immediate superior or email HR.</p>
-          </details>
-
-          <details class="faq-item searchable" data-category="leave" data-search="when leave approved manager operational requirements early travel commitment">
-            <summary>When will my leave be approved?</summary>
-            <p>Approval depends on operational requirements and manager approval. Apply early and do not make travel or personal commitments until the leave is officially approved in Faith.</p>
-          </details>
-
-          <details class="faq-item searchable" data-category="leave" data-search="cancel amend approved leave supervisor faith">
-            <summary>Can I cancel or amend approved leave?</summary>
-            <p>Yes. Inform your immediate supervisor promptly and update the request in Faith. Changes remain subject to manager approval.</p>
-          </details>
-
-          <details class="faq-item searchable" data-category="leave" data-search="sick annual leave medical certificate registered practitioner">
-            <summary>What happens if I fall sick during Annual Leave?</summary>
-            <p>Notify your supervisor and submit a valid Medical Certificate through the prescribed process. The company will review the request according to leave policy.</p>
-          </details>
-
-          <h3>Performance & Salary</h3>
-          <details class="faq-item searchable" data-category="performance" data-search="bonus increment kpi annual performance business needs policies">
-            <summary>Will there be bonuses or salary increments?</summary>
-            <p>Performance bonuses are not provided because performance is assessed monthly through KPIs. Salary increments are reviewed based on annual performance, business needs and company policy.</p>
-          </details>
-
-          <h3>Employee Relations</h3>
-          <details class="faq-item searchable" data-category="relations" data-search="complaint someone grievance hrbp confidential fair">
-            <summary>I have a complaint about someone. What should I do?</summary>
-            <p>Speak with your assigned HR Business Partner or email <a href="mailto:askhr@daythree.co">askhr@daythree.co</a>. Concerns are handled professionally, fairly and confidentially.</p>
-          </details>
-
-          <h3>HR Communication</h3>
-          <details class="faq-item searchable" data-category="communication" data-search="hr announcements company memos faith portal policies benefits events">
-            <summary>How can I stay updated with HR announcements?</summary>
-            <p>Regularly check Company Memos in the Faith portal for policy, benefit, event and company updates.</p>
-          </details>
-
-          <h3>HR Support & Logistics</h3>
-          <details class="faq-item searchable" data-category="support" data-search="who hrbp business unit support representative">
-            <summary>Who is my HR Business Partner?</summary>
-            <p>Each business unit has an assigned HRBP. Email <a href="mailto:askhr@daythree.co">askhr@daythree.co</a> if you are unsure and HR will direct your enquiry.</p>
-          </details>
-
-          <details class="faq-item searchable" data-category="support" data-search="update personal information address mobile emergency marital personal email education">
-            <summary>How do I update my personal information?</summary>
-            <p>Email HR when your address, phone number, emergency contact, marital status, personal email or educational qualifications change. Supporting documents may be required.</p>
-          </details>
-
-          <details class="faq-item searchable" data-category="support" data-search="submit resignation supervisor notice employment contract clearance exit">
-            <summary>How do I submit my resignation?</summary>
-            <p>Inform your immediate supervisor and submit your resignation. Serve the notice period in your Employment Contract. HR will guide the clearance and exit process.</p>
-          </details>
-
-          <details class="faq-item searchable" data-category="support" data-search="questions policy clarification hrbp">
-            <summary>Who should I contact about a policy?</summary>
-            <p>Contact your HR Business Partner or email <a href="mailto:askhr@daythree.co">askhr@daythree.co</a>.</p>
-          </details>
-
-          <h3>Career Development</h3>
-          <details class="faq-item searchable" data-category="career" data-search="internal job vacancies official communication faith">
-            <summary>Where can I view internal job vacancies?</summary>
-            <p>Internal vacancies are announced through official company communication channels in the Faith system.</p>
-          </details>
-
-          <h3>Information Security</h3>
-          <details class="faq-item searchable" data-category="security" data-search="suspicious email link attachment it helpdesk">
-            <summary>What should I do if I receive a suspicious email?</summary>
-            <p>Do not click links or download attachments. Report the email to the IT Helpdesk and delete it only after receiving IT guidance.</p>
-          </details>
-
-          <details class="faq-item searchable" data-category="security" data-search="personal email company information approved systems confidential disciplinary">
-            <summary>Can I use personal email to send company information?</summary>
-            <p>No. Company information must only be shared through approved systems and company email accounts. Unauthorised sharing may result in disciplinary action.</p>
-          </details>
-        </div>
+      <div class="resource-grid">
+        <article><span>▧</span><h3>Employment Letter</h3><p>Request employment or salary confirmation through HR.</p></article>
+        <article><span>▣</span><h3>Faith HR System</h3><p>Manage leave, claims and employee records.</p></article>
+        <article><span>◷</span><h3>Time Off</h3><p>Maximum allocation is two hours, subject to approval.</p></article>
+        <article><span>★</span><h3>Employee Benefits</h3><p>Corporate discounts may include Grab, foodpanda, Proton, INTI and Celebrity Fitness.</p></article>
       </div>
     </section>
 
-    <section id="support" class="support-section">
+    <section id="contact" class="contact-section shell">
       <div>
         <span class="eyebrow">NEED HELP?</span>
         <h2>Contact HR Support</h2>
-        <p>For HR assistance, contact your assigned HR representative or use the master inbox.</p>
+        <p>For employee support, policy clarification or personal HR matters, reach out to the HR team.</p>
       </div>
-      <div class="support-actions">
+      <div class="contact-actions">
         <a class="primary-btn" href="mailto:askhr@daythree.co">Email HR</a>
         <a class="secondary-btn" href="mailto:whistleblowing@daythree.co">Whistleblowing</a>
       </div>
@@ -407,47 +282,50 @@
   </main>
 
   <footer>
-    <div><strong>Daythree Employee Knowledge Portal</strong><span>Clear guidance and self-service resources for employees.</span></div>
+    <img src="assets/daythree-logo.png" alt="Daythree">
+    <div>
+      <strong>Employee Knowledge Portal</strong>
+      <span>Clear HR guidance, employee benefits and workplace resources in one place.</span>
+    </div>
     <span>© 2026 Daythree</span>
   </footer>
 
   <dialog id="imageModal">
-    <button id="closeModal" class="modal-close" type="button" aria-label="Close image">×</button>
+    <button id="modalClose" aria-label="Close image">×</button>
     <h3 id="modalTitle"></h3>
     <img id="modalImage" alt="">
   </dialog>
 
-  <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">↑</button>
-  <script src="script.js"></script>
-
-  <button id="chatLauncher" class="chat-launcher" type="button" aria-label="Open HR chat">
-    <span>💬</span><span>Ask HR</span>
+  <button id="chatLauncher" class="chat-launcher" type="button" aria-label="Open HR assistant">
+    <span>💬</span><strong>Ask HR</strong>
   </button>
 
-  <section id="chatPanel" class="chat-panel" aria-label="HR chat assistant" aria-hidden="true">
-    <header class="chat-header">
+  <aside id="chatPanel" class="chat-panel" aria-hidden="true">
+    <header>
       <div>
         <strong>Daythree HR Assistant</strong>
-        <small>Instant guidance from portal information</small>
+        <small>Instant answers from the HR portal</small>
       </div>
-      <button id="chatClose" type="button" aria-label="Close HR chat">×</button>
+      <button id="chatClose" aria-label="Close chat">×</button>
     </header>
-    <div id="chatMessages" class="chat-messages" aria-live="polite">
-      <div class="chat-message bot">Hi! I can help with leave, payroll, medical claims, overtime, resignation, HR contacts and workplace policies.</div>
-    </div>
-    <div class="chat-suggestions">
-      <button type="button" data-question="How do I apply for leave?">Apply for leave</button>
-      <button type="button" data-question="When is salary paid?">Salary date</button>
-      <button type="button" data-question="How do I submit a medical claim?">Medical claim</button>
-      <button type="button" data-question="How do I contact HR?">Contact HR</button>
-    </div>
-    <div class="chat-input-row">
-      <label class="sr-only" for="chatInput">Ask an HR question</label>
-      <input id="chatInput" type="text" placeholder="Type your HR question..." autocomplete="off">
-      <button id="chatSend" type="button">Send</button>
-    </div>
-    <p class="chat-disclaimer">General guidance only. For personal or confidential matters, contact HR directly.</p>
-  </section>
 
+    <div id="chatMessages" class="chat-messages" aria-live="polite">
+      <div class="message bot">Hi! Ask me about leave, payroll, medical claims, overtime, resignation, dress code or HR support.</div>
+    </div>
+
+    <div class="suggestion-row">
+      <button data-question="How do I apply for leave?">Apply leave</button>
+      <button data-question="When is salary paid?">Salary date</button>
+      <button data-question="How do I submit a medical claim?">Medical claim</button>
+    </div>
+
+    <div class="chat-input">
+      <input id="chatInput" type="text" placeholder="Ask an HR question...">
+      <button id="chatSend">Send</button>
+    </div>
+    <p class="chat-note">General guidance only. Contact HR for personal or confidential matters.</p>
+  </aside>
+
+  <script src="script.js"></script>
 </body>
 </html>
