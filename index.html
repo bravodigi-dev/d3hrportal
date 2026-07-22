@@ -218,22 +218,83 @@
             <span class="eyebrow purple">HR KNOWLEDGE CENTRE</span>
             <h2>Policies and common questions</h2>
           </div>
-          <div class="filter-wrap">
-            <label for="faqFilter">Filter</label>
-            <select id="faqFilter">
-              <option value="all">All categories</option>
-              <option value="payroll">Payroll</option>
-              <option value="medical">Medical Benefits</option>
-              <option value="leave">Leave & Working Arrangements</option>
-              <option value="performance">Performance & Salary</option>
-              <option value="relations">Employee Relations</option>
-              <option value="communication">HR Communication</option>
-              <option value="support">HR Support & Logistics</option>
-              <option value="career">Career Development</option>
-              <option value="security">Information Security</option>
-              <option value="benefits">Employee Benefits</option>
-            </select>
+          <div class="faq-result-summary">
+            <span id="activeCategoryIcon">▦</span>
+            <div>
+              <small>Viewing category</small>
+              <strong id="activeCategoryLabel">All categories</strong>
+            </div>
+            <b id="faqCount">0 questions</b>
           </div>
+        </div>
+
+        <div class="category-filter" id="categoryFilter" aria-label="FAQ categories">
+          <button class="category-btn active" type="button" data-category="all" data-icon="▦">
+            <span class="category-icon purple">▦</span>
+            <span><strong>All Topics</strong><small>View every question</small></span>
+            <b class="category-count">0</b>
+          </button>
+          <button class="category-btn" type="button" data-category="payroll" data-icon="💳">
+            <span class="category-icon pink">💳</span>
+            <span><strong>Payroll</strong><small>Salary, payslip and deductions</small></span>
+            <b class="category-count">0</b>
+          </button>
+          <button class="category-btn" type="button" data-category="medical" data-icon="✚">
+            <span class="category-icon green">✚</span>
+            <span><strong>Medical Benefits</strong><small>Claims and reimbursement</small></span>
+            <b class="category-count">0</b>
+          </button>
+          <button class="category-btn" type="button" data-category="leave" data-icon="📅">
+            <span class="category-icon blue">📅</span>
+            <span><strong>Leave & Working</strong><small>Leave, Time Off and schedules</small></span>
+            <b class="category-count">0</b>
+          </button>
+          <button class="category-btn" type="button" data-category="performance" data-icon="★">
+            <span class="category-icon orange">★</span>
+            <span><strong>Performance & Salary</strong><small>KPI, bonus and increment</small></span>
+            <b class="category-count">0</b>
+          </button>
+          <button class="category-btn" type="button" data-category="relations" data-icon="🤝">
+            <span class="category-icon coral">🤝</span>
+            <span><strong>Employee Relations</strong><small>Complaints and grievance</small></span>
+            <b class="category-count">0</b>
+          </button>
+          <button class="category-btn" type="button" data-category="communication" data-icon="📣">
+            <span class="category-icon orange">📣</span>
+            <span><strong>HR Communication</strong><small>Memos and announcements</small></span>
+            <b class="category-count">0</b>
+          </button>
+          <button class="category-btn" type="button" data-category="support" data-icon="🎧">
+            <span class="category-icon purple">🎧</span>
+            <span><strong>HR Support</strong><small>HRBP, records and resignation</small></span>
+            <b class="category-count">0</b>
+          </button>
+          <button class="category-btn" type="button" data-category="career" data-icon="🚀">
+            <span class="category-icon blue">🚀</span>
+            <span><strong>Career Development</strong><small>Internal opportunities</small></span>
+            <b class="category-count">0</b>
+          </button>
+          <button class="category-btn" type="button" data-category="security" data-icon="🛡">
+            <span class="category-icon green">🛡</span>
+            <span><strong>Information Security</strong><small>Email and data protection</small></span>
+            <b class="category-count">0</b>
+          </button>
+          <button class="category-btn" type="button" data-category="benefits" data-icon="🎁">
+            <span class="category-icon pink">🎁</span>
+            <span><strong>Employee Benefits</strong><small>Discounts and privileges</small></span>
+            <b class="category-count">0</b>
+          </button>
+        </div>
+
+        <div class="faq-toolbar">
+          <div>
+            <span id="faqSectionIcon">▦</span>
+            <div>
+              <small>Frequently asked questions</small>
+              <h3 id="faqSectionTitle">All HR Topics</h3>
+            </div>
+          </div>
+          <button id="clearFaqFilter" type="button" class="clear-filter hidden">Show all topics</button>
         </div>
 
         <div class="faq-grid">

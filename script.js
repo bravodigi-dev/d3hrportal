@@ -14,28 +14,95 @@ mobileNav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>mobile
 const searchInput=document.getElementById("globalSearch");
 const searchButton=document.getElementById("searchButton");
 const searchable=[...document.querySelectorAll(".searchable")];
-const faqFilter=document.getElementById("faqFilter");
+const categoryButtons=[...document.querySelectorAll(".category-btn")];
+const clearFaqFilter=document.getElementById("clearFaqFilter");
+const activeCategoryLabel=document.getElementById("activeCategoryLabel");
+const activeCategoryIcon=document.getElementById("activeCategoryIcon");
+const faqCount=document.getElementById("faqCount");
+const faqSectionTitle=document.getElementById("faqSectionTitle");
+const faqSectionIcon=document.getElementById("faqSectionIcon");
+let selectedCategory="all";
 const searchStatus=document.getElementById("searchStatus");
+
+const categoryLabels={
+  all:"All HR Topics",payroll:"Payroll",medical:"Medical Benefits",
+  leave:"Leave & Working Arrangements",performance:"Performance & Salary",
+  relations:"Employee Relations",communication:"HR Communication",
+  support:"HR Support & Logistics",career:"Career Development",
+  security:"Information Security",benefits:"Employee Benefits"
+};
+
+function updateCategoryCounts(){
+  const faqs=[...document.querySelectorAll(".faq")];
+  categoryButtons.forEach(btn=>{
+    const category=btn.dataset.category;
+    const total=category==="all"?faqs.length:faqs.filter(f=>f.dataset.category===category).length;
+    const count=btn.querySelector(".category-count");
+    if(count)count.textContent=total;
+  });
+}
 
 function applySearch(){
   const q=searchInput.value.trim().toLowerCase();
-  const category=faqFilter.value;
-  let shown=0;
+  let faqShown=0;
+  let allShown=0;
+
   searchable.forEach(el=>{
     const text=(el.dataset.search+" "+el.textContent).toLowerCase();
-    const categoryOk=!el.classList.contains("faq")||category==="all"||el.dataset.category===category;
+    const categoryOk=!el.classList.contains("faq")||selectedCategory==="all"||el.dataset.category===selectedCategory;
     const queryOk=!q||text.includes(q);
     const visible=categoryOk&&queryOk;
     el.classList.toggle("hidden",!visible);
-    if(visible)shown++;
+    if(visible){
+      allShown++;
+      if(el.classList.contains("faq")){
+        faqShown++;
+        el.classList.remove("category-enter");
+        void el.offsetWidth;
+        el.classList.add("category-enter");
+      }
+    }
   });
-  searchStatus.textContent=q?`${shown} matching portal items found for “${searchInput.value}”.`:"";
+
+  const activeBtn=categoryButtons.find(btn=>btn.dataset.category===selectedCategory);
+  const label=selectedCategory==="all"?"All categories":categoryLabels[selectedCategory];
+  const icon=activeBtn?.dataset.icon||"▦";
+
+  activeCategoryLabel.textContent=label;
+  activeCategoryIcon.textContent=icon;
+  faqSectionTitle.textContent=categoryLabels[selectedCategory]||"All HR Topics";
+  faqSectionIcon.textContent=icon;
+  faqCount.textContent=`${faqShown} question${faqShown===1?"":"s"}`;
+  clearFaqFilter.classList.toggle("hidden",selectedCategory==="all");
+
+  searchStatus.textContent=q
+    ? `${allShown} matching portal item${allShown===1?"":"s"} found for “${searchInput.value}”.`
+    : faqShown===0
+      ? "No questions are available under this category."
+      : "";
+
   if(q)document.getElementById("employee-info").scrollIntoView({behavior:"smooth"});
 }
+
+categoryButtons.forEach(btn=>btn.addEventListener("click",()=>{
+  selectedCategory=btn.dataset.category;
+  categoryButtons.forEach(item=>item.classList.toggle("active",item===btn));
+  applySearch();
+  document.querySelector(".faq-toolbar").scrollIntoView({behavior:"smooth",block:"center"});
+}));
+
+clearFaqFilter.addEventListener("click",()=>{
+  selectedCategory="all";
+  categoryButtons.forEach(btn=>btn.classList.toggle("active",btn.dataset.category==="all"));
+  applySearch();
+});
+
+updateCategoryCounts();
+applySearch();
+
 searchButton.addEventListener("click",applySearch);
 searchInput.addEventListener("keydown",e=>{if(e.key==="Enter")applySearch()});
 searchInput.addEventListener("input",()=>{if(!searchInput.value)applySearch()});
-faqFilter.addEventListener("change",applySearch);
 
 const modal=document.getElementById("imageModal");
 const modalImage=document.getElementById("modalImage");
