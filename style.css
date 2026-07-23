@@ -141,3 +141,9 @@ body.dark{--bg:#15151b;--surface:#202027;--surface-alt:#2a2933;--text:#f5f3f8;--
   .category-btn{flex-basis:215px}
   .faq-toolbar{align-items:flex-start;flex-direction:column}
 }
+
+
+.resource-link{display:block;text-decoration:none;color:inherit}
+.resource-link article{transition:all .25s ease}
+.resource-link:hover article{transform:translateY(-4px);border-color:var(--purple);box-shadow:0 14px 30px rgba(93,63,211,.15)}
+.resource-link:hover h3{color:var(--purple)}
