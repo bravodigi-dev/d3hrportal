@@ -462,8 +462,9 @@
     <img id="modalImage" alt="">
   </dialog>
 
-  <button id="chatLauncher" class="chat-launcher" type="button" aria-label="Open HR assistant">
-    <span>💬</span><strong>Ask HR</strong>
+  <button id="chatLauncher" class="chat-launcher" type="button" aria-label="Open HR assistant and ask HAIRA">
+    <img src="assets/haira-avatar.png" alt="" aria-hidden="true">
+    <strong>Ask HAIRA</strong>
   </button>
 
   <aside id="chatPanel" class="chat-panel" aria-hidden="true">
@@ -476,7 +477,7 @@
     </header>
 
     <div id="chatMessages" class="chat-messages" aria-live="polite">
-      <div class="message bot">Hi! Ask me about leave, payroll, medical claims, overtime, resignation, dress code or HR support.</div>
+      <div class="message bot">Hi! I’m <strong>HAIRA</strong>. Ask me about leave, payroll, medical claims, overtime, resignation, dress code or HR support.</div>
     </div>
 
     <div class="suggestion-row">
@@ -486,7 +487,7 @@
     </div>
 
     <div class="chat-input">
-      <input id="chatInput" type="text" placeholder="Ask an HR question...">
+      <input id="chatInput" type="text" placeholder="Ask HAIRA a question...">
       <button id="chatSend">Send</button>
     </div>
     <p class="chat-note">General guidance only. Contact HR for personal or confidential matters.</p>
