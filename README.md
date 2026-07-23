@@ -54,3 +54,10 @@ This version includes all information and FAQ topics from the original Kilimanja
 - Career vacancies
 - Information security
 - Corporate benefits and discounts
+
+
+## HAIRA update
+- Floating chat button changed from **Ask HR** to **Ask HAIRA**.
+- Added a female HAIRA avatar icon.
+- The chat panel title remains **Daythree HR Assistant**.
+- Updated the welcome message and input placeholder to mention HAIRA.
